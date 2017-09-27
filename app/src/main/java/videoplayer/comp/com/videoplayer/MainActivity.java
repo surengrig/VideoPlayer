@@ -6,14 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.MediaController;
-import android.widget.VideoView;
 
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    VideoView mVideoView;
+    VideoViewEx mVideoView;
     private Playlist mPlaylist;
 
     @Override

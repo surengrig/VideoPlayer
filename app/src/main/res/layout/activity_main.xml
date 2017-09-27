@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:id="@+id/relative_parent"
     android:background="#000000">
-    <VideoView
+    <videoplayer.comp.com.videoplayer.VideoViewEx
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

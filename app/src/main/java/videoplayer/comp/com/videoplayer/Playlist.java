@@ -45,7 +45,8 @@ class Playlist {
 
     /**
      * Sets the index of current playing item
-     * @param  index index to set the current playing item
+     *
+     * @param index index to set the current playing item
      */
     public void setCurrentPlayingIndex(int index) {
         mCurrentIndex = index;
@@ -54,7 +55,8 @@ class Playlist {
     /**
      * Get the next item in playlist. If the current playing item is the last in the playlist
      * cycles to first item.
-     * @return      the path to next item in playlist
+     *
+     * @return the path to next item in playlist
      */
     public String getNext() {
         if (mPlaylistItems == null || mPlaylistItems.isEmpty()) return null;
@@ -66,7 +68,8 @@ class Playlist {
 
     /**
      * Get the previous item in playlist
-     * @return      the path to next item in playlist
+     *
+     * @return the path to next item in playlist
      */
     public String getPrev() {
         if (mPlaylistItems == null || mPlaylistItems.isEmpty()) return null;
@@ -79,7 +82,8 @@ class Playlist {
 
     /**
      * Synchronizes the playlist with remote location
-     * @param  url to synchronize the playlist with
+     *
+     * @param url to synchronize the playlist with
      */
 
     public void update(final String url) {
@@ -105,8 +109,9 @@ class Playlist {
 
     /**
      * Caches the files for offline playback
-     * @param  baseUrl url to base location for the files
-     * @param  fetchedFiles files to download from baseUrl location
+     *
+     * @param baseUrl      url to base location for the files
+     * @param fetchedFiles files to download from baseUrl location
      */
     private boolean downloadRemoteFiles(String baseUrl, List<String> fetchedFiles) {
 
@@ -194,7 +199,8 @@ class Playlist {
 
     /**
      * Sets a listener to call when files caching and playlist synchronization is finished
-     * @param  listener listener to call
+     *
+     * @param listener listener to call
      */
     void setOnUpdateListener(OnUpdateListener listener) {
         mListener = listener;

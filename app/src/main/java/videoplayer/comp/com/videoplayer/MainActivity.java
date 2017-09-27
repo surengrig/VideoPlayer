@@ -19,20 +19,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//      set fullscreen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-
         mVideoView = findViewById(R.id.videoView);
-        MediaController vidControl = new CustomMediaController(this);
+        VolumeController volume = findViewById(R.id.seekBar);
+
+        volume.setAnchorView(mVideoView);
+
+        MediaController vidControl = new MediaController(this);
         vidControl.setAnchorView(mVideoView);
         mVideoView.setMediaController(vidControl);
 
-
         mPlaylist = new Playlist(this.getCacheDir().getPath() + "/" + Constants.CACHE_DIR);
-
 
         mPlaylist.setOnUpdateListener(new Playlist.OnUpdateListener() {
             @Override

@@ -1,6 +1,5 @@
 package videoplayer.comp.com.videoplayer;
 
-import android.graphics.PixelFormat;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -87,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putBoolean(Constants.PLAYLIST_IS_PLAYING, mVideoView.isPlaying());
         outState.putInt(Constants.PLAYLIST_CURRENT_POSITION, mVideoView.getCurrentPosition());
         outState.putInt(Constants.PLAYLIST_CURRENT_ITEM, mPlaylist.getCurrentIndex());
+        mPlaylist.savePlaylist();
         super.onSaveInstanceState(outState);
     }
 
